@@ -22,7 +22,7 @@ class Song
   attr_accessor :title
 
   def self.new_by_filename(filename)
-    self.title = filename.splt(" - ")[1]
+    self.title = filename.split(" - ")[1]
   end
 
 end
@@ -81,5 +81,3 @@ hotline_bling.artist
 ```
 
 This should then return the new `Artist` object that was created by the `#artist_name` method. This is just another example of how objects can collaborate without being directly related. 
-
-<a href='https://learn.co/lessons/ruby-collaborating-objects-readme' data-visibility='hidden'>View this lesson on Learn.co</a>
