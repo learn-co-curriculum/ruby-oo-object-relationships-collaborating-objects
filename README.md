@@ -15,7 +15,7 @@ Let's take a look at each of these collaborations in more detail.
 
 ## MP3 Importer collaborating with Songs
 
-The purpose of this MP3 Importer is to take in a list of mp3s and send each mp3 filename to the `Song` class to make a `Song`. Let's just focus on the collaboration. Our `MP3Importer` class will receive a list of filenames that look like this "Drake - Hot Line Bling". `MP3Importer` will then send each of those filenames to the `Song` class to be created.
+The purpose of this MP3 Importer is to take in a list of mp3s and send each mp3 filename to the `Song` class to make a `Song`. Let's just focus on the collaboration. Our `MP3Importer` class will receive a list of filenames that look like this "Drake - Hotline Bling". `MP3Importer` will then send each of those filenames to the `Song` class to be created.
 
 ```ruby
 class Song
