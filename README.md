@@ -82,5 +82,4 @@ hotline_bling.artist
 
 This should then return the new `Artist` object that was created by the `#artist_name` method. This is just another example of how objects can collaborate without being directly related. 
 
--		
--<a href='https://learn.co/lessons/ruby-collaborating-objects-readme' data-visibility='hidden'>View this lesson on Learn.co</a>
+<a href='https://learn.co/lessons/ruby-collaborating-objects-readme' data-visibility='hidden'>View this lesson on Learn.co</a>
