@@ -29,7 +29,7 @@ class Song
 
 end
 
-class Mp3Importer
+class MP3Importer
   attr_accessor :songs 
   def import(list_of_filenames)
     list_of_filenames.each{|file_name| songs << Song.new_by_filename(file_name)}
@@ -37,9 +37,9 @@ class Mp3Importer
 end
 ```
 
-Notice how *within the `Mp3Importer` class we are calling the `Song` class and a method within the `Song` class: `.new_by_filename`*.
+Notice how *within the `MP3Importer` class we are calling the `Song` class and a method within the `Song` class: `.new_by_filename`*.
 
-When we hit this line of code, it will send us to the `Song` class to do whatever behavior we have defined in the `.new_by_filename` class method. Then we will return to the `Mp3Importer` class to continue executing the code. This is at the heart of collaborating objects.  
+When we hit this line of code, it will send us to the `Song` class to do whatever behavior we have defined in the `.new_by_filename` class method. Then we will return to the `MP3Importer` class to continue executing the code. This is at the heart of collaborating objects.
 
 
 ## Songs collaborating with Artists
