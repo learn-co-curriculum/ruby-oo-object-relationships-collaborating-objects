@@ -7,7 +7,7 @@
 
 ## Introduction
 
-Let's stick with our song/artist example. Our song class is responsible for handling songs. Our artist class is responsible for handling artists. However, these things clearly have some relation to one another. Remember, a song belongs to an artist, and an artist has many songs. These two classes will have to collaborate. 
+Let's stick with our song/artist example. Our song class is responsible for handling songs. Our artist class is responsible for handling artists. However, these things clearly have some relation to one another. Remember, a song belongs to an artist, and an artist has many songs. These two classes will have to collaborate.
 
 In fact, the classes do not even need to have any relationship (`"has many"` or `"belongs to"`) to collaborate. Imagine we have an MP3 Importer that is responsible for taking in a bunch of MP3 files and making a song for each unique filename. It is not hard to imagine that to make a song, the MP3 Importer will have to have some sort of communication with the `Song` class.
 
@@ -30,9 +30,8 @@ class Song
 end
 
 class MP3Importer
-  attr_accessor :songs 
   def import(list_of_filenames)
-    list_of_filenames.each{|file_name| songs << Song.new_by_filename(file_name)}
+    list_of_filenames.each{ |filename| Song.new_by_filename(filename) }
   end
 end
 ```
@@ -49,7 +48,7 @@ Since our song belongs to an artist, we will want to collaborate with the `Artis
 ```ruby
 class Song
   attr_accessor :artist
-  
+
   # other methods
 
   def artist_name=(name)
@@ -65,12 +64,12 @@ end
 ```ruby
 class Artist
   attr_accessor :name
-  
+
   def initialize(name)
-  	@name = name
+    @name = name
   end
-  
-  # other methods 
+
+  # other methods
 
 end
 ```
@@ -82,6 +81,6 @@ hotline_bling.artist_name = "Drake"
 hotline_bling.artist
 ```
 
-This should then return the new `Artist` object that was created by the `#artist_name` method. This is just another example of how objects can collaborate without being directly related. 
+This should then return the new `Artist` object that was created by the `#artist_name` method.
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/ruby-collaborating-objects-readme' title='Ruby Collaborating Objects Readme'>Ruby Collaborating Objects Readme</a> on Learn.co and start learning to code for free.</p>
