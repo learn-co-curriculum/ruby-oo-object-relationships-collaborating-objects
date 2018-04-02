@@ -7,8 +7,6 @@
 
 ## Introduction
 
-Hello Nina!!!
-
 Let's stick with our song/artist example. Our song class is responsible for handling songs. Our artist class is responsible for handling artists. However, these things clearly have some relation to one another. Remember, a song belongs to an artist, and an artist has many songs. These two classes will have to collaborate.
 
 In fact, the classes do not even need to have any relationship (`"has many"` or `"belongs to"`) to collaborate. Imagine we have an MP3 Importer that is responsible for taking in a bunch of MP3 files and making a song for each unique filename. It is not hard to imagine that to make a song, the MP3 Importer will have to have some sort of communication with the `Song` class.
